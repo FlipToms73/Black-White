@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class LoadLastScene : MonoBehaviour
+{
+    [SerializeField]
+    private float delayBeforeLoading = 106;
+    [SerializeField]
+    private string sceneNameToLoad;
+
+    private float timeElapsed;
+
+    void Start()
+    {
+        
+    }
+
+    
+
+    private void Update()
+    {
+        timeElapsed += Time.deltaTime;
+
+        if (timeElapsed > delayBeforeLoading)
+        {
+            SceneManager.LoadScene(sceneNameToLoad);
+        }
+    }
+
+}
