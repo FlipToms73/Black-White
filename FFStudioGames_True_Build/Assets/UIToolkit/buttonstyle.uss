@@ -1,0 +1,56 @@
+.button {
+    -unity-text-outline-color: rgb(0, 0, 0);
+    text-shadow: 5px 0 0 rgb(152, 152, 152);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    background-image: none;
+    -unity-font-style: bold-and-italic;
+    width: 300px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    height: 100px;
+    font-size: 55px;
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-slice-right: 0;
+    -unity-slice-bottom: 0;
+    -unity-slice-scale: 0;
+    border-left-color: rgba(255, 255, 255, 0.74);
+    border-right-color: rgba(255, 255, 255, 0.74);
+    border-top-color: rgba(255, 255, 255, 0.74);
+    border-bottom-color: rgba(255, 255, 255, 0.74);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
+
+.title-hidden {
+    scale: 0;
+    opacity: 0;
+    transition-property: scale, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.title-visible {
+    scale: 1;
+    opacity: 1;
+}
+
+.button-hidden {
+    scale: 0;
+    opacity: 0;
+    transition-property: scale, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.button-visible {
+    scale: 1;
+    opacity: 1;
+}
+
+

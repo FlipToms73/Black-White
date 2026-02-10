@@ -1,10 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+
+
+#if UNITY_EDITOR
+using UnityEditor; // needed for EditorApplication
+#endif
 
 public class Play : MonoBehaviour
 {
+    private Button buttonPlay;
+    private Button buttonQuit;
+    private void OnEnable()
+    {
+        var root = GetComponent<UIDocument>().rootVisualElement;
+        
+        var menu = root.Q<VisualElement>("MainMenuContainer");
+        var btcontainer = menu.Q<VisualElement>("ButtonContainer");
+
+        buttonPlay = btcontainer.Q<Button>("menuButtonPlay");
+        buttonPlay.clicked += PlayGame;
+        
+        buttonQuit = btcontainer.Q<Button>("mainMenuQuitButton");
+        buttonQuit.clicked += QuitGame;
+    }
 
     public void PlayGame()
     {
@@ -13,7 +32,10 @@ public class Play : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Quitting.");
-        Application.Quit();
+        #if UNITY_EDITOR
+            EditorApplication.isPlaying = false; // stops play mode in editor
+        #else
+            Application.Quit(); // quits the built game
+        #endif
     }
 }
