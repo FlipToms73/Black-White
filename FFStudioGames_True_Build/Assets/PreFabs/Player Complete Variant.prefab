@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1514604189143848862, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
@@ -69,13 +70,35 @@ PrefabInstance:
       objectReference: {fileID: 6323702037871192102}
     - target: {fileID: 7528297526150782162, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
       propertyPath: m_Name
-      value: Player Complete
+      value: Player Complete Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7528297526150782163, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 581fdd3bc1fc66442bdb4562ecaa2c61, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 7528297526150782164, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
+      propertyPath: jumpSFX
+      value: 
+      objectReference: {fileID: 1556323523}
+    - target: {fileID: 7528297526150782164, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
+      propertyPath: deathSFX
+      value: 
+      objectReference: {fileID: 1556323531}
+    - target: {fileID: 7528297526150782164, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 1556323523}
+    m_RemovedComponents:
+    - {fileID: 7528297526150781738, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7528297526150782162, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1556323523}
+    - targetCorrespondingSourceObject: {fileID: 7528297526150782162, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1556323531}
   m_SourcePrefab: {fileID: 100100000, guid: a7d365e491dd9084195913ba392da4cf, type: 3}
 --- !u!212 &6323702037871192102 stripped
 SpriteRenderer:
@@ -97,7 +120,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 0ca0e23571128a5468ce2103fb1aa398, type: 2}
-  m_audioClip: {fileID: 8300000, guid: d79756e325fc2a643be512de807bef6c, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: d79756e325fc2a643be512de807bef6c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -193,7 +217,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: de16d70196183d64ba05275988f45dbb, type: 2}
-  m_audioClip: {fileID: 8300000, guid: eb6e26b7a249e03438699f3b74ed4891, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: eb6e26b7a249e03438699f3b74ed4891, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
